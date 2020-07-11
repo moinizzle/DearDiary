@@ -23,7 +23,7 @@ export default class CreateAuthor extends Component{
             //event.preventDefault();
             //console.log(this.state.author);
 
-            axios.post("http://localhost:" + process.env.PORT + "/authors/add", { author: this.state.author })
+            axios.post("/authors/add", { author: this.state.author })
             .then(function(res){console.log(res.data)});
 
         this.setState({

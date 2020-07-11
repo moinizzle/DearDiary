@@ -26,7 +26,7 @@ export default class CreateEntry extends Component{
         //let authors = [];
         axios.get('/authors/')
         .then(res => 
-            this.setState({ authors: res.products.data.map(
+            this.setState({ authors: res.data.map(
                 author => author.author)}))
         .catch(err => console.log(err))
     }

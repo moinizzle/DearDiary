@@ -17,7 +17,7 @@ export default class EntriesList extends Component{
         
         axios.get('/entries/')
         .then(res =>
-            this.setState({ entries: res.products.data.map(
+            this.setState({ entries: res.data.map(
                 entry => [entry.author, entry.entry] )}))
         .catch(err => console.log(err))
         alert(this.state.entries.toString());
