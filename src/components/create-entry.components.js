@@ -24,7 +24,7 @@ export default class CreateEntry extends Component{
     componentDidMount(){
 
         //let authors = [];
-        axios.get('http://localhost:4444/authors/')
+        axios.get('http://localhost:' + process.env.PORT + '/authors/')
         .then(res => 
             this.setState({ authors: res.data.map(
                 author => author.author)}))
