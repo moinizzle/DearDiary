@@ -13,10 +13,10 @@ app.use(express.json());
 
 //const uri = process.env.ATLAS_URI;
 
-const uri = "mongodb+srv://admin:admin@cluster0.qgcva.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority"
+const uri = process.env.MONGODB_URI;
 // connection the process URI to database
 
-mongoose.connect(uri || process.env.MONGODB_URI, { 
+mongoose.connect(uri, { 
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true });
