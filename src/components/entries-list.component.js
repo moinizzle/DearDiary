@@ -15,7 +15,7 @@ export default class EntriesList extends Component{
 
     componentDidMount(){
         
-        axios.get('http://localhost:4444/entries/')
+        axios.get('http://localhost:' + process.env.PORT +'/entries/')
         .then(res =>
             this.setState({ entries: res.data.map(
                 entry => [entry.author, entry.entry] )}))

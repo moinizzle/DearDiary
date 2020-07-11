@@ -34,7 +34,7 @@ export default class CreateEntry extends Component{
     submitEntry(event){
         
         //alert(this.state.authorButton);
-        axios.post('http://localhost:4444/entries/add/', { author: this.state.authorButton, entry: this.state.entry})
+        axios.post('http://localhost:' + process.env.PORT + '/entries/add/', { author: this.state.authorButton, entry: this.state.entry})
         .then(function(res){console.log(res.data)});
 
         this.setState({
