@@ -16,7 +16,11 @@ app.use(express.json());
 const uri = "mongodb+srv://admin:admin@cluster0.qgcva.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority"
 // connection the process URI to database
 
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
+mongoose.connect(uri || process.env.MONGODB_URI, { 
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true });
+
 const connection = mongoose.connection;
 
 connection.once('open', () => {
@@ -30,6 +34,10 @@ const entriesRouter = require('./routes/entries')
 // setting up the backend urls
 app.use('/entries/', entriesRouter);
 app.use('/authors/', authorsRouter);
+
+if (process.env.NODE_ENV === 'production'){
+    app.use(express.static('build'))
+}
 
 app.listen(port, function() {
     console.log(`Server is running: ${port}`);
