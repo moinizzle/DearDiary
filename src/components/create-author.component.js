@@ -22,6 +22,7 @@ export default class CreateAuthor extends Component{
         submitAuthor(event){
             //event.preventDefault();
             //console.log(this.state.author);
+            
 
             axios.post("/authors/add", { author: this.state.author })
             .then(function(res){console.log(res.data)});
