@@ -26,7 +26,7 @@ export default class CreateEntry extends Component{
         //let authors = [];
         axios.get('/authors/')
         .then(res => 
-            this.setState({ authors: res.data.map(
+            this.setState({ authors: res.products.data.map(
                 author => author.author)}))
         .catch(err => console.log(err))
     }
@@ -34,7 +34,7 @@ export default class CreateEntry extends Component{
     submitEntry(event){
         
         //alert(this.state.authorButton);
-        axios.post('http://localhost:' + process.env.PORT + '/entries/add/', { author: this.state.authorButton, entry: this.state.entry})
+        axios.post('/entries/add/', { author: this.state.authorButton, entry: this.state.entry})
         .then(function(res){console.log(res.data)});
 
         this.setState({
