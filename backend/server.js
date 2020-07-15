@@ -44,6 +44,14 @@ app.get('/*', (req, res) => {
 }) 
 }
 
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname, '../build'), function(err) {
+      if (err) {
+        res.status(500).send(err)
+      }
+    })
+  })
+
 app.listen(process.env.PORT || 4444, () =>{
     console.log(`Server is running:`);})
     .on('error', err => {
