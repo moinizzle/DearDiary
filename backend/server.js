@@ -6,7 +6,7 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT;
+const port = 4444 || process.env.PORT;
 
 app.use(cors());
 app.use(express.json());
@@ -45,6 +45,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../build'))
 })  
 
-app.listen(port, function() {
-    console.log(`Server is running: ${port}`);
-});
+app.listen(process.env.PORT || 4444, () =>{
+    console.log(`Server is running:`);})
+    .on('error', err => {
+        console.log(`Error Code: ${err.code}`);});
