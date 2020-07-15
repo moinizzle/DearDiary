@@ -36,18 +36,13 @@ const entriesRouter = require('./routes/entries')
 app.use('/entries/', entriesRouter);
 app.use('/authors/', authorsRouter);
 
-// if (process.env.NODE_ENV === 'production'){
-//     app.use(express.static('build'))
-// }
-app.use(express.static(path.join(__dirname, './client/build')))
+if (process.env.NODE_ENV === 'production'){
 
-app.get('*', function(_, res) {
-  res.sendFile(path.join(__dirname, './client/build/index.html'), function(err) {
-    if (err) {
-      res.status(500).send(err)
-    }
-  })
+app.use(express.static(path.join(__dirname, '../build')))
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build'))
 }) 
+}
 
 app.listen(process.env.PORT || 4444, () =>{
     console.log(`Server is running:`);})

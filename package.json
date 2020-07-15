@@ -27,7 +27,7 @@
     "install-client": "npm install",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run backend/client/build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
