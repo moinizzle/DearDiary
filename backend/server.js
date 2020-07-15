@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const path = require('path');
 
 require('dotenv').config();
 
@@ -35,9 +36,14 @@ const entriesRouter = require('./routes/entries')
 app.use('/entries/', entriesRouter);
 app.use('/authors/', authorsRouter);
 
-if (process.env.NODE_ENV === 'production'){
-    app.use(express.static('build'))
-}
+// if (process.env.NODE_ENV === 'production'){
+//     app.use(express.static('build'))
+// }
+
+app.use(express.static(path.join(__dirname, '../build')))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build'))
+})  
 
 app.listen(port, function() {
     console.log(`Server is running: ${port}`);
