@@ -40,17 +40,17 @@ if (process.env.NODE_ENV === 'production'){
 
 app.use(express.static(path.join(__dirname, '../build')))
 app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../build'))
+    res.sendFile(path.join(__dirname, '../build/index.html'))
 }) 
 }
 
-app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../build/index.html'), function(err) {
-      if (err) {
-        res.status(500).send(err)
-      }
-    })
-  })
+// app.get('/*', function(req, res) {
+//     res.sendFile(path.join(__dirname, '../build/index.html'), function(err) {
+//       if (err) {
+//         res.status(500).send(err)
+//       }
+//     })
+//   })
 
 app.listen(process.env.PORT || 4444, () =>{
     console.log(`Server is running:`);})
