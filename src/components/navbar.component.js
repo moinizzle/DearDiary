@@ -7,7 +7,7 @@ export default class NavigationBar extends Component {
     render(){
 
         return (
-            <div>
+            <div class="container-fluid">
             <nav className="navbar navbar-expand-xl navbar-light bg-light" display= "flex">
                 <Link to="/" className="navbar-brand">
                 <img className="navbar-brand" src="favicon.ico" alt="logo" width="40px"></img></Link>
