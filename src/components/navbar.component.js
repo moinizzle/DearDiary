@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import $ from 'jqery';
+import $ from 'jquery';
 
 
 export default class NavigationBar extends Component {
