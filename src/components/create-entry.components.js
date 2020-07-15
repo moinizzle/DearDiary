@@ -32,9 +32,9 @@ export default class CreateEntry extends Component{
     }
 
     submitEntry(event){
-        
+        event.preventDefault();
         //alert(this.state.authorButton);
-        axios.post('entries/add/', { author: this.state.authorButton, entry: this.state.entry})
+        axios.post('entries/add', { author: this.state.authorButton, entry: this.state.entry})
         .then(function(res){console.log(res.data)});
 
         this.setState({
