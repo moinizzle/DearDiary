@@ -24,7 +24,7 @@ export default class CreateEntry extends Component{
     componentDidMount(){
 
         //let authors = [];
-        axios.get('/authors/')
+        axios.get('api/authors/')
         .then(res => 
             this.setState({ authors: [res.data].map(
                 author => author.author)}))
