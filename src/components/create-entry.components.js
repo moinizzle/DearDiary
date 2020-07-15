@@ -24,7 +24,7 @@ export default class CreateEntry extends Component{
     componentDidMount(){
 
         //let authors = [];
-        axios.get('authors')
+        axios.get('api/authors')
         .then(res => 
             this.setState({ authors: res.data.map(
                 author => author.author)}))
@@ -34,7 +34,7 @@ export default class CreateEntry extends Component{
     submitEntry(event){
         
         //alert(this.state.authorButton);
-        axios.post('/entries/add/', { author: this.state.authorButton, entry: this.state.entry})
+        axios.post('api/entries/add/', { author: this.state.authorButton, entry: this.state.entry})
         .then(function(res){console.log(res.data)});
 
         this.setState({
