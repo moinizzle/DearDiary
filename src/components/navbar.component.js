@@ -7,9 +7,11 @@ export default class NavigationBar extends Component {
     render(){
 
         return (
-            <div class="container-fluid">
+            <div>
             <nav className="navbar navbar-expand-xl navbar-light bg-light" display= "flex">
+            <div className="container">
                 <Link to="/" className="navbar-brand">
+                
                 <img className="navbar-brand" src="favicon.ico" alt="logo" width="40px"></img></Link>
                 <div className="collapse navbar-collapse">  
                 
@@ -27,10 +29,13 @@ export default class NavigationBar extends Component {
                     <Link to= "/journal" className="nav-link"> Entry Log </Link>
                     </li>
                 </ul>
+                
                 </div>
                 
+                </div>
                 
                 </nav>
+                
                 </div>
                 
                 
