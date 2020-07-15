@@ -8,7 +8,7 @@ export default class NavigationBar extends Component {
 
         return (
             <div>
-            <nav className="navbar navbar-light bg-light" display= "flex">
+            <nav className="navbar navbar-expand-sm navbar-light bg-light" display= "flex">
             
                 <Link to="/" className="navbar-brand">
                 
@@ -16,7 +16,7 @@ export default class NavigationBar extends Component {
                 
                 <div className="collapse navbar-collapse">  
                 
-                <ul className="navbar-nav mr-auto">
+                <ul className="navbar-nav mr-auto" display="flex">
                     <li className="nav-item">
                     <Link to= "/author" className="nav-link"> Create New Author </Link>
                     </li>
