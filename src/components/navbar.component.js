@@ -7,13 +7,13 @@ export default class NavigationBar extends Component {
     render(){
 
         return (
-            <div>
+            <div className="container">
             <nav className="navbar navbar-expand-xl navbar-light bg-light" display= "flex">
             
                 <Link to="/" className="navbar-brand">
                 
                 <img className="navbar-brand" src="favicon.ico" alt="logo" width="40px"></img></Link>
-                <div className="container">
+                
                 <div className="collapse navbar-collapse">  
                 
                 <ul className="navbar-nav mr-auto">
@@ -33,7 +33,7 @@ export default class NavigationBar extends Component {
                 
                 </div>
                 
-                </div>
+            
                 
                 </nav>
                 
