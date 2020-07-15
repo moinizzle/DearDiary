@@ -9,10 +9,11 @@ export default class NavigationBar extends Component {
         return (
             <div>
             <nav className="navbar navbar-expand-xl navbar-light bg-light" display= "flex">
-            <div className="container">
+            
                 <Link to="/" className="navbar-brand">
                 
                 <img className="navbar-brand" src="favicon.ico" alt="logo" width="40px"></img></Link>
+                <div className="container">
                 <div className="collapse navbar-collapse">  
                 
                 <ul className="navbar-nav mr-auto">
