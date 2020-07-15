@@ -20,7 +20,7 @@ export default class CreateAuthor extends Component{
         }
 
         submitAuthor(event){
-            //event.preventDefault();
+            event.preventDefault();
             //console.log(this.state.author);
             
 
