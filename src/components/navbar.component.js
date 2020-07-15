@@ -9,7 +9,7 @@ export default class NavigationBar extends Component {
 
         return (
             <div>
-            <nav className="navbar navbar-fixed-top navbar-light bg-light" display= "flex">
+            <nav className="navbar fixed-top navbar-light bg-light" display= "flex">
             
                 <Link to="/" className="navbar-brand">
                 
