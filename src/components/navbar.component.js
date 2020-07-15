@@ -7,8 +7,8 @@ export default class NavigationBar extends Component {
     render(){
 
         return (
-            <div className="container">
-            <nav className="navbar navbar-expand-sm navbar-light bg-light" display= "flex">
+            <div>
+            <nav className="navbar navbar-light bg-light" display= "flex">
             
                 <Link to="/" className="navbar-brand">
                 
