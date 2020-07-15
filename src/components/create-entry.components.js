@@ -40,6 +40,9 @@ export default class CreateEntry extends Component{
         this.setState({
             entry: ""
         })
+        
+        event.target.reset();
+        
     }
 
     handleEntry(event){
@@ -69,7 +72,7 @@ export default class CreateEntry extends Component{
             <br></br>
 
             <div>
-            <form onSubmit={this.submitEntry}>
+            <form onSubmit={this.submitEntry}  >
                 <div className="form-group">
                 <label htmlFor="exampleFormControlTextarea1">New Entry: </label>
                 <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" onChange={this.handleEntry}></textarea>

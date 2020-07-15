@@ -30,6 +30,8 @@ export default class CreateAuthor extends Component{
         this.setState({
             author: ""
         })
+
+        event.target.reset();
     }
 
     render(){
