@@ -39,16 +39,15 @@ app.use('/authors/', authorsRouter);
 // if (process.env.NODE_ENV === 'production'){
 //     app.use(express.static('build'))
 // }
-if (process.env.NODE_ENV === 'production') {
-    // Exprees will serve up production assets
-    app.use(express.static('client/build'));
-  
-    // Express serve up index.html file if it doesn't recognize route
-    const path = require('path');
-    app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-    });
-  } 
+app.use(express.static(path.join(__dirname, './client/build')))
+
+app.get('*', function(_, res) {
+  res.sendFile(path.join(__dirname, './client/build/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+}) 
 
 app.listen(process.env.PORT || 4444, () =>{
     console.log(`Server is running:`);})
