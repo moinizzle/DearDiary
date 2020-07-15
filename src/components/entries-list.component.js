@@ -15,9 +15,9 @@ export default class EntriesList extends Component{
 
     componentDidMount(){
         
-        axios.get('api/entries/')
+        axios.get('entries')
         .then(res =>
-            this.setState({ entries: [res.data].map(
+            this.setState({ entries: res.data.map(
                 entry => [entry.author, entry.entry] )}))
         .catch(err => console.log(err))
         //alert(this.state.entries.toString());
