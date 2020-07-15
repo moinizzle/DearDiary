@@ -28,7 +28,7 @@ function App() {
         <Route exact path="/" component={withRouter(Home)} />
         <Route path="/author" component={withRouter(CreateAuthor)} />
         <Route path="/create" component={withRouter(CreateEntry)} /> 
-        <Route path="/entries" component={withRouter(EntriesList)} />
+        <Route path="/journal" component={withRouter(EntriesList)} />
         </Switch>
         
     </div>

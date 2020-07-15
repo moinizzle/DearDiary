@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class NavigationBar extends Component {
     // convert to DOM
@@ -23,7 +23,7 @@ export default class NavigationBar extends Component {
                     <Link to= "/champions" className="nav-link"> Entries </Link>
                     </li>  */}
                     <li className="nav-item">
-                    <Link to= "/entries" className="nav-link"> Entry Log </Link>
+                    <Link to= "/journal" className="nav-link"> Entry Log </Link>
                     </li>
                 </ul>
                 </div>
