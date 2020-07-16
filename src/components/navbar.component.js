@@ -11,7 +11,7 @@ export default class NavigationBar extends Component {
 
         return (
         
-            <nav className="navbar navbar-expand-sm navbar-light bg-light" display= "flex" position="fixed">
+            <nav className="navbar navbar-expand-sm navbar-light bg-light" display= "flex">
                 <Link to="/" className="navbar-brand">
                 
                 <img className="navbar-brand" src="favicon.ico" alt="logo" width="40px"></img></Link>
@@ -20,7 +20,6 @@ export default class NavigationBar extends Component {
                 <span class="navbar-toggler-icon"></span>
                 </button>
 
-                
                 <div className="collapse navbar-collapse" id="collapsibleNavbar">  
                 
                 <ul className="navbar-nav mr-auto" display="flex">
