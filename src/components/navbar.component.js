@@ -10,7 +10,7 @@ export default class NavigationBar extends Component {
 
         return (
             <div>
-            <nav className="navbar navbar-expand-sm navbar-light bg-light" display= "flex">
+            <nav className="navbar navbar-expand-sm navbar-light bg-light" display= "flex" position="fixed">
             
                 <Link to="/" className="navbar-brand">
                 
