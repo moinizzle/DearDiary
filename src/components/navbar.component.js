@@ -17,6 +17,7 @@ export default class NavigationBar extends Component {
                 
                 <img className="navbar-brand" src="favicon.ico" alt="logo" width="40px"></img></Link>
                 
+                <div className="container-fluid">
                 <div className="collapse navbar-collapse">  
                 
                 <ul className="navbar-nav mr-auto" display="flex">
@@ -35,7 +36,7 @@ export default class NavigationBar extends Component {
                 </ul>
                 
                 </div>
-                
+                </div>
             
                 
                 </nav>
