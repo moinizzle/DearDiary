@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'jquery/dist/jquery.min.js';
-import 'popper/dist/umd/popper.min.js';
+import 'popper.js/dist/umd/popper.min.js';
 
 
 export default class NavigationBar extends Component {
