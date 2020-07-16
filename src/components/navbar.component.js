@@ -29,26 +29,12 @@ export default class NavigationBar extends Component {
                     <li className="nav-item">
                     <Link to= "/create" className="nav-link"> Create New Entry </Link>
                     </li>
-                    {/* <li className="nav-item">
-                    <Link to= "/champions" className="nav-link"> Entries </Link>
-                    </li>  */}
                     <li className="nav-item">
                     <Link to= "/journal" className="nav-link"> Entry Log </Link>
                     </li>
                 </ul>
-                
-                </div>
-                
-            
-                
+                </div>                
                 </nav>
-                
-                
-                
-                
-           
-            
-
         )
     }
 }
