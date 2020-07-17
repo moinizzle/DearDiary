@@ -1,5 +1,8 @@
 
-You can check out the project here: [Dear Diary](https://dear-diary-app.herokuapp.com/)
+**You can check out the project here: [Dear Diary](https://dear-diary-app.herokuapp.com/)**
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
